@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang = "id">
+    <!--
+        Nama  : Muhammad Satria Ramadhani
+        NIM   : 2005128
+        Kelas : Ilmu Komputer - KOM-4C2
+    -->
+    
+    <!-- Web preparation. -->
+    <head>
+        <meta charset = "UTF-8" />
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+        <link rel = "stylesheet" href = "style/style.css">
+        <title>Tugas Praktikum 01 - Desain dan Pemrograman Web</title>
+    </head>
+
+    <!-- Body -->
+    <body>
+        <!-- Header, showing logo and website name. -->
+        <header>
+            <a href = "index.html">
+                <img class = "logo" src = "img/Keyakizaka46Logo.svg">
+                <h1>Keyakizaka46</h1>
+            </a>
+        </header>
+
+        <!-- Top navigation, showing all clickable page. -->
+        <nav class = "topnav">
+            <a href = "index.html">Home</a>
+            <a href = "discography.html">Discography</a>
+            <a href = "contact.html">Contact</a>
+        </nav>
+
+        <!-- Side navigation, showing photo and biodata. -->
+        <nav class = "sidenav">
+            <h2 align = "center">Profil Diri</h2>
+            <img class = "center" src = "img/SatriaRamadhani.png">
+            <table>
+                <tr>
+                    <th>Nama</th>
+                    <th class = "biodata">Muhammad Satria Ramadhani</th>
+                </tr>
+                <tr>
+                    <th>NIM</th>
+                    <th class = "biodata">2005128</th>
+                </tr>
+                <tr>
+                    <th>Jenis Kelamin</th>
+                    <th class = "biodata">Laki-laki</th>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <th class = "biodata">satramadhani@upi.edu</th>
+                </tr>
+            </table>
+        </nav>
+
+        <!-- Main content, showing form. -->
+        <form method = "post" action = "./contact.html">
+            <fieldset class = "content">
+                <!-- Name content, with required attribute and custom validity. -->
+                <label for = "name">
+                    <p class = "formname">Nama</p>
+                    <input
+                        class = "input"
+                        name = "name"
+                        type = "text"
+                        placeholder = "Nama Kamu..."
+                        required = ""
+                        oninput = "this.setCustomValidity('')"
+                        oninvalid = "this.setCustomValidity('Harap isi bidang ini.')" />
+                </label>
+    
+                <!-- Region content, with required attribute and custom validity. -->
+                <label for = "region">
+                    <p class = "formname">Asal Negara</p>
+                    <input
+                        class = "input"
+                        name = "region"
+                        type = "text"
+                        placeholder = "Asal..."
+                        required = ""
+                        oninput = "this.setCustomValidity('')"
+                        oninvalid = "this.setCustomValidity('Harap isi bidang ini.')" />
+                </label>
+    
+                <!-- Message content, with required attribute and custom validity. -->
+                <label for = "message">
+                    <p class = "formname">Pesan</p>
+                    <textarea
+                        class = "input"
+                        name = "message"
+                        placeholder = "Isi Pesan..."
+                        rows = 3
+                        required = ""
+                        oninput = "this.setCustomValidity('')"
+                        oninvalid = "this.setCustomValidity('Harap isi bidang ini.')"
+                    ></textarea>
+                </label>
+
+                <!-- Input button. -->
+                <input class = "submit" type = "submit" value = "Submit" />
+            </fieldset>
+        </form>
+
+        <!-- Footer. -->
+        <footer>
+            <h4>Praktikum Desain dan Pemrograman Web</h4>
+        </footer>
+    </body>
+</html>
